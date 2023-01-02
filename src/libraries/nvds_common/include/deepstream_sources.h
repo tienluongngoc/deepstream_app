@@ -30,6 +30,7 @@ extern "C"
 
 #include <gst/gst.h>
 #include "deepstream_dewarper.h"
+#include "deepstream_config.h"
 #include <sys/time.h>
 
 typedef enum

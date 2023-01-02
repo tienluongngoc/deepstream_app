@@ -94,7 +94,7 @@ nvds_c2d_parse_cloud_message (gpointer data, guint size)
    */
   NvDsC2DMsgSR *srMsg = g_new0 (NvDsC2DMsgSR, 1);
   JsonParser *parser = json_parser_new ();
-  ret = json_parser_load_from_data (parser, data, size, &error);
+  // ret = json_parser_load_from_data (parser, data, size, &error);
   if (!ret) {
     NVGSTDS_ERR_MSG_V ("Error in parsing json message %s", error->message);
     g_error_free (error);
