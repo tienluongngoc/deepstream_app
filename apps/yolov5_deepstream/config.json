@@ -1,0 +1,24 @@
+{
+  "common": {
+    "cudadec_mem_type": 0,
+    "nvbuf_memory_type": 0
+  },
+  "source":{
+    "source_list": [
+      {
+        "enable": true,
+        "uri": "video.mp4",
+        "type": "rtsp",
+        "drop_frame_interval": 0,
+        "gpu_id": 0
+      }
+    ],
+    "streamuxer": {
+      "width": 1920,
+      "height": 1080,
+      "gpu_id": 0,
+      "batched_push_timeout": 4000,
+      "enable_padding": 0
+    }
+  }
+}
