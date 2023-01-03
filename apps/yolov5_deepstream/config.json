@@ -4,7 +4,7 @@
     "nvbuf_memory_type": 0
   },
   "source":{
-    "source_list": [
+    "sources": [
       {
         "enable": true,
         "uri": "video.mp4",
