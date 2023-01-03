@@ -20,5 +20,16 @@
       "batched_push_timeout": 4000,
       "enable_padding": 0
     }
+  },
+  "gie":{
+    "person_detection": {
+      "enable": true,
+      "batch_size": 5,
+      "interval": 0,
+      "unique_id": 0,
+      "gpu_id": 0,
+      "model_config": ""
+
+    }
   }
 }

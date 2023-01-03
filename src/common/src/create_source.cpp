@@ -20,7 +20,7 @@ NvDsSourceType GetSourceType(std::string type){
 
 
 
-GstElement* Source::CreateSource(){
+GstElement* Source::Create(){
   // TODO: Have to check whether key is exiting or not before get value!!!!!!!!!!!!
   // This code so dirty, you should refacetor
   auto all_configs = Config::Instance()->GetAllConfig();
@@ -29,8 +29,8 @@ GstElement* Source::CreateSource(){
   NvDsSourceConfig *nvds_source_configs = new NvDsSourceConfig[1024];
   NvDsSrcParentBin *nvds_parent_bin = new NvDsSrcParentBin();
 
-  auto cudadec_mem_type = all_configs["common"]["cudadec_mem_type"];
-  auto nvbuf_memory_type = all_configs["common"]["nvbuf_memory_type"];
+  int cudadec_mem_type = all_configs["common"]["cudadec_mem_type"];
+  int nvbuf_memory_type = all_configs["common"]["nvbuf_memory_type"];
 
   int number_sources = sources.size();
 

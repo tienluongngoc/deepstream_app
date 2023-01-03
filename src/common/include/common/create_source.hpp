@@ -10,5 +10,5 @@ class Source {
      * 
      * @return GstElement*
      */
-    static GstElement* CreateSource();
+    static GstElement* Create();
 };
