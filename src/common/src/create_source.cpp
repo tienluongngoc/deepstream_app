@@ -18,8 +18,6 @@ NvDsSourceType GetSourceType(std::string type){
     }
 }
 
-
-
 GstElement* Source::Create(){
   // TODO: Have to check whether key is exiting or not before get value!!!!!!!!!!!!
   // This code so dirty, you should refacetor

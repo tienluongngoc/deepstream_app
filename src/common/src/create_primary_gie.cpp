@@ -11,16 +11,20 @@ GstElement* PrimaryGie::Create(std::string name){
   std::string model_config = primary_config["model_config"];
   nvds_gie_config->config_file_path = strdup(model_config.c_str());
   auto enable =  primary_config["enable"];
+  nvds_gie_config->enable = enable ? 1 : 0;
+  int batch_size = primary_config["batch_size"];
+  nvds_gie_config->batch_size = batch_size;
+  int interval = primary_config["interval"];
+  nvds_gie_config->interval = interval;
+  int unique_id = primary_config["unique_id"];
+  nvds_gie_config->unique_id = unique_id;
+  int gpu_id = primary_config["gpu_id"];
+  nvds_gie_config->gpu_id = gpu_id;
+  nvds_gie_config->plugin_type = NV_DS_GIE_PLUGIN_INFER; // TODO: should get from config file
+  int nvbuf_memory_type = all_configs["common"]["nvbuf_memory_type"];
+  nvds_gie_config->nvbuf_memory_type = nvbuf_memory_type;
 
-  enable = enable ? 1 : 0;
-  nvds_gie_config->enable = enable;
-  // nvds_gie_config->batch_size = stoi(primary_config["batch_size"]);
-  // nvds_gie_config->interval = stoi(primary_config["interval"]);
-  // nvds_gie_config->unique_id = stoi(primary_config["unique_id"]);
-  // nvds_gie_config->gpu_id = stoi(primary_config["gpu_id"]);
-  // nvds_gie_config->plugin_type = NV_DS_GIE_PLUGIN_INFER;
-  // nvds_gie_config->nvbuf_memory_type =  all_configs["common"]["nvbuf_memory_type"];
-  
+  create_primary_gie_bin(nvds_gie_config, nvds_primary_gie_bin);
 
-  return NULL;
+  return nvds_primary_gie_bin->bin;
 }

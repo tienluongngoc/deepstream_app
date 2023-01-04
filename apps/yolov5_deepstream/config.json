@@ -28,7 +28,7 @@
       "interval": 0,
       "unique_id": 0,
       "gpu_id": 0,
-      "model_config": ""
+      "model_config": "models/SRCFD/ds_config.txt"
 
     }
   }

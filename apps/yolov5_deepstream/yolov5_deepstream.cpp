@@ -18,7 +18,6 @@ int main (int argc, char *argv[])
 
   auto source = Source::Create();
   auto person_detection = PrimaryGie::Create("person_detection");
-
-  std::cout << "Hello world \n";
+  
   return 0;
 }
