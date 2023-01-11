@@ -8,6 +8,7 @@
 #include "config/config.hpp"
 #include "common/create_primary_gie.hpp"
 #include "common/create_osd.hpp"
+#include "common/create_tiler.hpp"
 
 #define CONFIG "apps/yolov5_deepstream/config.json"
 
@@ -21,6 +22,7 @@ int main (int argc, char *argv[])
   auto person_detection = PrimaryGie::Create("person_detection");
 
   auto osd = OSD::Create();
+  auto tiler = Tiler::Create();
   
   return 0;
 }

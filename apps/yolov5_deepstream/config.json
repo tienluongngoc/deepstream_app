@@ -31,5 +31,14 @@
       "model_config": "models/SRCFD/ds_config.txt"
 
     }
+  },
+  "tiler": {
+    "enable": true,
+    "rows": 1,
+    "columns": 1,
+    "width": 1920,
+    "height": 1080,
+    "gpu_id": 0,
+    "show_source": 0
   }
 }
