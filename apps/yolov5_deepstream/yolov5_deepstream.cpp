@@ -14,7 +14,6 @@
 
 
 #define CONFIG "apps/yolov5_deepstream/config.json"
-
 int main (int argc, char *argv[])
 {  
   gst_init (NULL, NULL);
@@ -30,8 +29,8 @@ int main (int argc, char *argv[])
   auto tiler = Tiler::Create();
   auto sink = Sink::Create(0);
 
-  gst_bin_add_many(GST_BIN (pipeline), source, osd, tiler, sink, NULL);
-  gst_element_link_many(source, osd, tiler, sink, NULL);
+  gst_bin_add_many(GST_BIN (pipeline), source, detection, osd, tiler, sink, NULL);
+  gst_element_link_many(source, detection, osd, tiler, sink, NULL);
 
   GMainLoop *loop = g_main_loop_new (NULL, FALSE);
   auto bus = gst_pipeline_get_bus (GST_PIPELINE (pipeline));

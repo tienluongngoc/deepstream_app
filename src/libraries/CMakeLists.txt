@@ -4,4 +4,5 @@ add_subdirectory(spdlog)
 add_subdirectory(nvdslib)
 add_subdirectory(nvds_common)
 add_subdirectory(jsonlib)
+add_subdirectory(opencv)
 
