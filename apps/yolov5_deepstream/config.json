@@ -7,8 +7,8 @@
     "sources": [
       {
         "enable": true,
-        "uri": "video.mp4",
-        "type": "rtsp",
+        "uri": "file:///VSS/deeepstream_base/video/video3.mp4",
+        "type": "uri",
         "drop_frame_interval": 0,
         "gpu_id": 0
       }
@@ -40,5 +40,27 @@
     "height": 1080,
     "gpu_id": 0,
     "show_source": 0
+  },
+  "sink": {
+    "enable": true,
+    "encoder": "H265",
+    "encoder_resource": "",
+    "container": "",
+    "bitrate": 4000000,
+    "sync": 0,
+    "profile": 0,
+    "udp_buffer_size": 0, 
+    "iframeinterval": 0,
+    "sink_type": "udp",
+    "rtsp_port": 8899,
+    "batch": false,
+    "gpu_id": 0,
+    "sink_list": [
+      {
+        "id": 0,
+        "port": 9000,
+        "endpoint": "/test"
+      }
+    ]
   }
 }
