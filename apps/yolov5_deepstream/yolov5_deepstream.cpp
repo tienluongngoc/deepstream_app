@@ -7,6 +7,7 @@
 #include "common/create_source.hpp"
 #include "config/config.hpp"
 #include "common/create_primary_gie.hpp"
+#include "common/create_osd.hpp"
 
 #define CONFIG "apps/yolov5_deepstream/config.json"
 
@@ -18,6 +19,8 @@ int main (int argc, char *argv[])
 
   auto source = Source::Create();
   auto person_detection = PrimaryGie::Create("person_detection");
+
+  auto osd = OSD::Create();
   
   return 0;
 }
