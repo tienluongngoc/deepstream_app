@@ -28,7 +28,7 @@
       "interval": 0,
       "unique_id": 0,
       "gpu_id": 0,
-      "model_config": "models/yolov7/config_infer_primary.txt"
+      "model_config": "models/yolov8/config_infer_primary.txt"
 
     }
   },
