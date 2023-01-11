@@ -1,3 +1,0 @@
-add_executable(yolov5_deepstream yolov5_deepstream.cpp)
-target_compile_features(yolov5_deepstream PUBLIC cxx_std_20)
-target_link_libraries(yolov5_deepstream PUBLIC gstreammer nvdslib common config utils)

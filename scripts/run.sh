@@ -1,5 +1,5 @@
 
-BINARY=./build/apps/yolov5_deepstream/yolov5_deepstream
+BINARY=./build/apps/detection_deepstream/detection_deepstream
 clear
 if [[ $# == 0 ]]; then
     echo Keep build directory

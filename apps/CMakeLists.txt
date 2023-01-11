@@ -1,1 +1,1 @@
-add_subdirectory(yolov5_deepstream)
+add_subdirectory(detection_deepstream)

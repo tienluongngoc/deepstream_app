@@ -1,0 +1,3 @@
+add_executable(detection_deepstream detection_deepstream.cpp)
+target_compile_features(detection_deepstream PUBLIC cxx_std_20)
+target_link_libraries(detection_deepstream PUBLIC gstreammer nvdslib common config utils)

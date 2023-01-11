@@ -13,7 +13,7 @@
 #include "utils/call_bus.hpp"
 
 
-#define CONFIG "apps/yolov5_deepstream/config.json"
+#define CONFIG "apps/detection_deepstream/config.json"
 int main (int argc, char *argv[])
 {  
   gst_init (NULL, NULL);
